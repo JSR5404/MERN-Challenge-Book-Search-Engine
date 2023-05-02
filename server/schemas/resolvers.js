@@ -48,7 +48,7 @@ const resolvers = {
         );
         return updatedUser;
       }
-      throw new AuthenticationError("You need to be logged in!");
+      throw new AuthenticationError("Log In First");
     },
     removeBook: async (parent, { bookId }, context) => {
       if (context.user) {
@@ -59,7 +59,7 @@ const resolvers = {
         );
         return updatedUser;
       }
-      throw new AuthenticationError("You need to be logged in!");
+      throw new AuthenticationError("Log In First");
     },
   },
 };
